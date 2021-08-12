@@ -73,7 +73,7 @@ const sortByChildren = (charArray) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -122,12 +122,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  const regex = /[A-B][A-Ba-b]+/g;
-  let test = str.match(regex);
-  if (test) {
+  const regex=/[A-Z][A-Za-z]+/g;
+  let test=str.match(regex);
+  if(test){
     return test;
-  } else {
-    return test;
+  }else{
+    return [];
   }
 };
 
@@ -140,9 +140,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
   // Solution code here...
   let regex = /[A-B]/;
-  return arr.filter((element) => {
-    if (regex.test(element[0]))
-      return element;
+  return arr.filter((element)=>{
+    if (regex.test(element[0])){
+      return element;}
   });
 };
 
@@ -235,8 +235,8 @@ describe('Testing challenge 2', () => {
   });
   test('It should return false if the input does not contain a w', () => {
     expect(containsW('hello everyone')).toBe(false);
-  })
-})
+  });
+});
 
 describe('Testing challenge 3', () => {
   test('It should return true if the input is a number', () => {
@@ -262,7 +262,7 @@ describe('Testing challenge 4', () => {
   test('It should return false if the input does not contain the word school', () => {
     expect(containsWorld('hello everyone')).toBe(false);
   });
-})
+});
 
 describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {
